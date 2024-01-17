@@ -1,6 +1,6 @@
 import express, {Router} from 'express'
 
-export interface Options{
+interface Options{
     port:number;
     routes:Router;
     publicPath?:string;

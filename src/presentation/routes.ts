@@ -6,7 +6,7 @@ export class AppRoutes{
     static get routes():Router{
         const router = Router();
 
-        router.use('/countries',CountryRoutes.routes )
+        router.use('/api/countries',CountryRoutes.routes )
         return router
     }
 }
