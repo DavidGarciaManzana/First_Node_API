@@ -11,7 +11,7 @@ datasource db {
 }
 
 model country {
-  id      Int     @id @default(autoincrement())
-  country String  @db.VarChar
-  key     String? @db.VarChar
+  id   Int     @id @default(autoincrement())
+  name String  @db.VarChar
+  key  String? @db.VarChar
 }
