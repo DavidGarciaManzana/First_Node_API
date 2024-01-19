@@ -1,11 +1,11 @@
 import {Request,Response} from "express";
-import {CountryRepository} from "../../domain";
+import {IcountryRepository} from "../../domain";
 
 export class CountryController{
 
     // Dep. Iny.
     constructor(
-        private readonly countryRepository:CountryRepository
+        private readonly countryRepository:IcountryRepository
     ) {
     }
     //CRUD READ

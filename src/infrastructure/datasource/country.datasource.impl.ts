@@ -1,7 +1,7 @@
-import {CountryDatasource, CountryEntity} from "../../domain";
+import {IcountryDatasource, CountryEntity} from "../../domain";
 import {prisma} from "../../data/postgres";
 
-export class CountryDatasourceImpl implements CountryDatasource {
+export class CountryDatasourceImpl implements IcountryDatasource {
     async getAll(): Promise<CountryEntity[]> {
         const countries = await prisma.country.findMany()
         const answer = countries.map(country=>CountryEntity.fromObject(country))
@@ -28,7 +28,6 @@ export class CountryDatasourceImpl implements CountryDatasource {
         return CountryEntity.fromObject(newCountry)
     }
     async updateById(data: any,id:number): Promise<CountryEntity> {
-        //findById already has a condition to throw a error if something is wrong
         await this.findById(id)
         const updatedCountry = await prisma.country.update({
             where: {

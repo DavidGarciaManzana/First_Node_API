@@ -1,5 +1,5 @@
 import {CountryEntity} from "../../entities/country.entity";
-import {CountryRepository} from "../../repositories/country.repository";
+import {IcountryRepository} from "../../repositories/Icountry.repository";
 
 export interface DeleteCountryUseCase{
     execute(id:number):Promise<CountryEntity>
@@ -7,7 +7,7 @@ export interface DeleteCountryUseCase{
 
 export class DeleteCountry implements DeleteCountryUseCase{
     constructor(
-        private readonly repository:CountryRepository
+        private readonly repository:IcountryRepository
     ) {
     }
 

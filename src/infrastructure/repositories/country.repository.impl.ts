@@ -1,9 +1,9 @@
-import {CountryDatasource, CountryEntity, CountryRepository} from "../../domain";
+import {IcountryDatasource, CountryEntity, IcountryRepository} from "../../domain";
 
-export class CountryRepositoryImpl implements CountryRepository{
+export class CountryRepositoryImpl implements IcountryRepository{
 
     constructor(
-        private readonly datasource:CountryDatasource
+        private readonly datasource:IcountryDatasource
     ) {
     }
     getAll(): Promise<CountryEntity[]> {

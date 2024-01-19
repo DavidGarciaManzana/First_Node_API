@@ -1,5 +1,5 @@
-export * from './datasources/country.datasource'
-export * from './repositories/country.repository'
+export * from './datasources/Icountry.datasource'
+export * from './repositories/Icountry.repository'
 export * from './entities/country.entity'
 export * from './use-cases/country/get-countries'
 export * from './use-cases/country/get-country'

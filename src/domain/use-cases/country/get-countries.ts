@@ -1,5 +1,5 @@
 import {CountryEntity} from "../../entities/country.entity";
-import {CountryRepository} from "../../repositories/country.repository";
+import {IcountryRepository} from "../../repositories/Icountry.repository";
 
 export interface GetCountriesUseCase{
     execute():Promise<CountryEntity[]>
@@ -7,7 +7,7 @@ export interface GetCountriesUseCase{
 
 export class GetCountries implements GetCountriesUseCase{
     constructor(
-        private readonly repository:CountryRepository
+        private readonly repository:IcountryRepository
     ) {
     }
 

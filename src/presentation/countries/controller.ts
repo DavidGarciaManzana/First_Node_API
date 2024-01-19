@@ -1,11 +1,11 @@
 import {Request,Response} from "express";
-import {CountryRepository, CreateCountry, DeleteCountry, GetCountries, GetCountry, UpdateCountry} from "../../domain";
+import {IcountryRepository, CreateCountry, DeleteCountry, GetCountries, GetCountry, UpdateCountry} from "../../domain";
 
 export class CountryController{
 
     // Dep. Iny.
     constructor(
-        private readonly countryRepository:CountryRepository
+        private readonly countryRepository:IcountryRepository
     ) {
     }
     //CRUD READ

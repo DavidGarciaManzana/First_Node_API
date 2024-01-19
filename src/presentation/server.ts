@@ -19,8 +19,8 @@ export class Server {
     }
     async start(){
 
-        //*Middlewares (cualquier peticion que venga, serializa el body como un json)
-        this.app.use(express.json());
+        //*Middlewares
+        this.app.use(express.json()); //(any incoming request, serialize the body as JSON)
 
         //*Routes
         this.app.use(this.routes);
